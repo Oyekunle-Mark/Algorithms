@@ -4,9 +4,11 @@ import argparse
 
 
 def find_max_profit(prices):
+    # set a default profit of second price minus first price
     max_profit = prices[1] - prices[0]
     prices_len = len(prices)
 
+    # find the difference between each price and the price that comes before
     for i in range(0, prices_len):
         for j in range(0, i):
             profit = prices[i] - prices[j]
