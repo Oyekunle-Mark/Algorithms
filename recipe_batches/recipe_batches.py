@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-import math
-
 
 def recipe_batches(recipe, ingredients):
     recipe_amount = recipe.values()
