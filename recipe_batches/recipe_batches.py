@@ -2,17 +2,22 @@
 
 
 def recipe_batches(recipe, ingredients):
+    # Grab the amount of recipe and ingredient provided
     recipe_amount = recipe.values()
     ingredients_amount = ingredients.values()
 
+    # will hold the ratio of ingredient provided and required
     batches = []
 
+    # if an ingredient is missing return 0
     if len(recipe_amount) != len(ingredients_amount):
         return 0
 
+    # compare recipe to ingredient
     for rec, ing in zip(recipe_amount, ingredients_amount):
         ratio = ing // rec
 
+        # if any ingredient is short of required amount return 0
         if ratio == 0:
             return 0
 
