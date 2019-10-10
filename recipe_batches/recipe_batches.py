@@ -2,6 +2,15 @@
 
 
 def recipe_batches(recipe, ingredients):
+    """Determines the amount of meals that could be make out of a given ingredient
+
+    Arguments:
+        recipe {dict} -- the recipe
+        ingredients {dict} -- the provided ingredients
+
+    Returns:
+        int -- the maximum amount of meals possible
+    """
     # Grab the amount of recipe and ingredient provided
     recipe_amount = recipe.values()
     ingredients_amount = ingredients.values()
