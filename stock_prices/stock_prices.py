@@ -4,6 +4,14 @@ import argparse
 
 
 def find_max_profit(prices):
+    """Find the max profit from a list of prices
+
+    Arguments:
+        prices {list} -- list of prices as integer
+
+    Returns:
+        int -- maximum profit obtainable
+    """
     # set a default profit of second price minus first price
     max_profit = prices[1] - prices[0]
     prices_len = len(prices)
