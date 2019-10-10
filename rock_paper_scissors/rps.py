@@ -4,9 +4,17 @@ import sys
 
 
 def rock_paper_scissors(n):
-    # the keywords
+    """Rock paper scissors recursive algorithm
+
+    Arguments:
+            n {int} -- number of combination
+
+    Returns:
+            list -- the generated combination
+    """
+	# the keywords
     keyWords = ['rock', 'paper', 'scissors']
-    # will hold the combinations
+	# will hold the combinations
     result = []
     turns = n
 
@@ -16,15 +24,12 @@ def rock_paper_scissors(n):
             result.append(game)
             return
 
-        for i in keyWords:
-            # recursive case
-            generateCombinations(turnsLeft - 1, game + [i])
+    	for i in keyWords:
+			# recursive case
+			generateCombinations(turnsLeft - 1, game + [i])
 
     generateCombinations(turns, [])
     return result
-
-
-print(rock_paper_scissors(2))
 
 
 if __name__ == "__main__":
