@@ -4,6 +4,15 @@ import sys
 
 
 def making_change(amount, denominations):
+    """Implementation of the making change algorithm
+
+    Arguments:
+        amount {int} -- amount in cent
+        denominations {list} -- changes available
+
+    Returns:
+        int -- possible change that can be made
+    """
     # [1, 5, 10, 25, 50] -> provided denominations
 
     # initialize a variable to an empty array to hold the possible number of ways to make change
@@ -43,16 +52,13 @@ def making_change(amount, denominations):
     return len(combinations)
 
 
-print(making_change(20, [1, 5, 10, 25, 50]))
-
-
-# if __name__ == "__main__":
-#     # Test our your implementation from the command line
-#     # with `python making_change.py [amount]` with different amounts
-#     if len(sys.argv) > 1:
-#         denominations = [1, 5, 10, 25, 50]
-#         amount = int(sys.argv[1])
-#         print("There are {ways} ways to make {amount} cents.".format(
-#             ways=making_change(amount, denominations), amount=amount))
-#     else:
-#         print("Usage: making_change.py [amount]")
+if __name__ == "__main__":
+    # Test our your implementation from the command line
+    # with `python making_change.py [amount]` with different amounts
+    if len(sys.argv) > 1:
+        denominations = [1, 5, 10, 25, 50]
+        amount = int(sys.argv[1])
+        print("There are {ways} ways to make {amount} cents.".format(
+            ways=making_change(amount, denominations), amount=amount))
+    else:
+        print("Usage: making_change.py [amount]")
