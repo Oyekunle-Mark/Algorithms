@@ -12,23 +12,28 @@ def rock_paper_scissors(n):
     Returns:
             list -- the generated combination
     """
-	# the keywords
+    # the keywords
     keyWords = ['rock', 'paper', 'scissors']
-	# will hold the combinations
+    # will hold the combinations
     result = []
     turns = n
 
+    # will generate the combinations
     def generateCombinations(turnsLeft, game):
         # base case
         if turnsLeft == 0:
+            # Add the combinations to the result array
             result.append(game)
             return
 
-    	for i in keyWords:
-			# recursive case
-			generateCombinations(turnsLeft - 1, game + [i])
+        # Use every word in the keyword
+        for i in keyWords:
+            # recursive case
+            generateCombinations(turnsLeft - 1, game + [i])
 
+    # call the function with an empty array
     generateCombinations(turns, [])
+
     return result
 
 
