@@ -8,6 +8,17 @@ import sys
 
 
 def eating_cookies(n, cache=None):
+    """Implementation of the eating cookie algorithm
+
+    Arguments:
+        n {int} -- number of cookies
+
+    Keyword Arguments:
+        cache {[type]} -- [description] (default: {None})
+
+    Returns:
+        int -- possible number of ways of eating cookie
+    """
     # there is only one way of eating 0 cookie
     if n == 0:
         return 1
@@ -51,9 +62,10 @@ def eating_cookies(n, cache=None):
     return len(result)
 
 
-# if __name__ == "__main__":
-#   if len(sys.argv) > 1:
-#     num_cookies = int(sys.argv[1])
-#     print("There are {ways} ways for Cookie Monster to eat {n} cookies.".format(ways=eating_cookies(num_cookies), n=num_cookies))
-#   else:
-#     print('Usage: eating_cookies.py [num_cookies]')
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        num_cookies = int(sys.argv[1])
+        print("There are {ways} ways for Cookie Monster to eat {n} cookies.".format(
+            ways=eating_cookies(num_cookies), n=num_cookies))
+    else:
+        print('Usage: eating_cookies.py [num_cookies]')
